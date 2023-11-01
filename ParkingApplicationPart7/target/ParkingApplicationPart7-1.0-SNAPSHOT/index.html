@@ -1,0 +1,348 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TuitionFeeWaiverForm</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body class="container-fluid">
+        <div class="card" style="width:1000px; margin: auto; margin-top: 50px; margin-bottom: 50px;">
+            <div>
+                <div class="col-sm-6">
+                    <img src = "neu.jpg" alt="Northeastern University Human Resources" />
+                </div>
+                <div class="col-sm-6 text-right" style="font-size:30px; font-weight: 700;">
+                    Tuition Waiver Form
+                </div>
+
+            </div>
+            <br/> <br/>           
+            <br/><br/>
+
+            <br/>
+            <div style="border:2px solid;">
+                <i>This form is used by part-time faculty, part-time staff, retirees, their spouses or domestic partners and their dependents.</i><br>
+                <i>All full-time faculty and staff should use the online Tuition Waiver Form found on myNEU. Before completing this form,</i></br>
+                <i>please refer to the Tuition Waiver Program Guidelines. Be sure to include a Dependent Certification Form along with</i></br>
+                <i>the submission of this form for any dependent children.</i></br>
+            </div>
+            <form class="form" action="tutionwaiver" method="POST">
+
+                <div>
+
+                    <!---- This part represents the Section 1 of the form ---->
+
+                    <h4 class="text-danger"> <b>Section 1 </b></h4>
+                    <div class="form-group">
+                        <div class="col-xs-4" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="academicTerm">Academic Term:</label>
+                            <input type="text" name="academicTerm" required="required" style="border:0ch; border-bottom:1px solid;">
+                            <label style="font-weight:normal;font-size: 12px; color: DimGray;">(Fall, Winter, Spring or Summer)*</label>
+                        </div>
+
+                        <div class="col-xs-4" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="academicYear">Academic Year: </label>
+                            <input type="number" name="academicYear" required="required" style="border:0ch; border-bottom:1px solid;">
+                        </div>
+
+                        <div class="col-xs-4" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="employeeStatus">Employee Status:</label>
+                            <label style="font-weight:normal;font-size: 12px; color: DimGray;"><input type="radio" name="employeeStatus" value="ptStaff" style="height:10px"> P/T Staff</label>
+                            <label style="font-weight:normal;font-size: 12px; color: DimGray;"><input type="radio" name="employeeStatus" value="ptFaculty" style="height:10px">P/T Faculty</label>
+                            <label style="font-weight:normal;font-size: 12px; color: DimGray;"><input type="radio" name="employeeStatus" value="retiree" style="height:10px">Retiree</label>
+                            <label style="font-weight:normal;font-size: 12px; color: DimGray;"><input type="radio" name="employeeStatus" value="other" style="height:10px">other<input type="text" name="employeeStatusOther" style="border:0ch; border-bottom:1px solid;"></label>
+                        </div>
+
+                    </div>
+                    <p style="font-size: 15px; color: DimGray; font-weight: 400;"><I>*Terms with multiple sessions are considered one academic term for tuition waiver purposes e.g., summer sessions I and
+                            II are considered one academic term.</I></p>
+
+                </div>
+                <div>
+
+                    <!---- This part represents the Section 2 of the form ---->
+
+                    <h4 class="text-danger"> <b>Section 2 </b></h4>
+                    <div class="form-group">
+
+                        <div class="col-xs-4" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="name" required="required" style=" border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-4" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="relationToEmployee" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-4" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="northeasternId" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-4" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="name">Student's Name </label>
+                        </div>
+
+                        <div class="col-xs-4" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="relation_to_employee">Relationship to Employee </label>
+                        </div>
+
+                        <div class="col-xs-4" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="nuid">Student's NUID</label>
+                        </div>
+
+                        <div class="col-xs-8" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="differentEmpName" required="required" style=" border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-4" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="employeeNortheasternId" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-8" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="different_emp_name">Employee's Name (if different form Student’s) </label>
+                        </div>
+
+                        <div class="col-xs-4" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="empy_nuid">Employee's NUID</label>
+                        </div>
+
+                        <div class="col-xs-3" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="department" required="required" style=" border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-3" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="campusLocation" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-3" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="phoneNumber" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-3" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="supervisorName" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-3" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="department">Department</label>
+                        </div>
+
+                        <div class="col-xs-3" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="campus_location">Campus Location</label>
+                        </div>
+
+                        <div class="col-xs-3" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="phone_number">Phone Number </label>
+                        </div>
+
+                        <div class="col-xs-3" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="supervisor_name">Supervisor's Name</label>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <div style="margin-top: 160px;">
+
+                    <!---- This part represents the Section 3 of the form ---->
+
+                    <h4 > <b class="text-danger">Section 3 </b> <I><b class="text-primary" style="font-size: 15px;">Indicate the applicable school or program: </b></I></h4>
+
+                    <div class="form-group">
+                        <div class="col-xs-4" style="color: DimGray;">
+                            <label><input type="radio" name="discipline" value="undergrade" style="height:10px"> Undergraduate Program</label>
+                        </div>
+
+                        <div class="col-xs-5" style="color: DimGray;">
+                            <label ><input type="radio" name="discipline" value="law" style="height:10px"> Law School (excludes employees)</label>
+                        </div>
+
+                        <div class="col-xs-3" style="color: DimGray; font-size: 13px;">
+                            <label><input type="radio" name="discipline" value="doctor" style="height:10px"> Doctoral Candidate</label>
+                        </div>
+
+                        <div class="col-xs-5" style="color: DimGray;">
+                            <label><input type="radio" name="discipline" value="cps_undergrade" style="height:10px">College of Professional Studies(CPS) Undergraduate</label>
+                        </div>
+
+                        <div class="col-xs-4" style="color: DimGray;">
+                            <label><input type="radio" name="discipline" value="cps_grad" style="height:10px"> CPS Graduate School</label>
+                        </div>
+
+                        <div class="col-xs-3" style="color: DimGray;">
+                            <label ><input type="radio" name="discipline" value="graduate_school" style="height:10px"> Graduate School</label>
+                        </div>
+                        <br/>
+                        <br/>
+                    </div>
+
+                    <div style="background-color: LightGray; height: 42px; color:rgb(5, 43, 84)">
+                        One course per academic term may be taken one-half hour before the end of your workday. If this applies to you, this
+                        form must be signed by your supervisor below and approved by Human Resources Management. 
+                    </div>
+                    <div style="background-color: LightGray; margin-top: 4px; color:rgb(5, 43, 84)">
+                        Complete the following course information. If you are an employee taking a job related course, please attach the Job
+                        Related Designation Form to this waiver.
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-2 text-center" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="courseno"> Course No. </label>
+                        </div>
+                        <div class="col-xs-2 text-center" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="coursename"> Course Name </label>
+                        </div>
+                        <div class="col-xs-3 text-center" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="supervisor_signature"> Supervisor Signature </label>
+                        </div>
+                        <div class="col-xs-2 text-center" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="credit_hrs"> Credit Hrs. </label>
+                        </div>
+                        <div class="col-xs-2 text-center" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="day"> Day(s) </label>
+                        </div>
+                        <div class="col-xs-1 text-center" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="time"> Time </label>
+                        </div>
+
+                        <div class="col-xs-2" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="courseNumber1" required="required" style=" border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-2" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="courseName1" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-3" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="supervisorSignature1" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-2" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="creditHours1" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-2" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="day1" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-1" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="time" name="time1" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-2" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="courseNumber2" required="required" style=" border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-2" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="courseName2" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-3" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="supervisorSignature2" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-2" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="creditHours2" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-2" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="day2" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-1" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="time" name="time2" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-2" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="courseNumber3" required="required" style=" border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-2" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="courseName3" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-3" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="supervisorSignature3" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-2" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="creditHours3" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-2" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="day3" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-1" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="time" name="time3" required="required" style="border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+                    </div>
+                </div>
+
+                <!---- This part represents the Section 4 of the form ---->
+
+                <div  style="margin-top: 110px;">
+                    <h4 class="text-danger"> <b>Section 4 </b></h4>
+                    <p><i><b> In accordance with Northeastern University's Tuition Waiver Program Guidelines, my signature attests that I am
+                                currently enrolled in the above courses, or that the student listed above is my spouse, domestic partner or
+                                unmarried dependent child or the dependent child of my domestic partner as defined under current IRS tax
+                                regulations. I also certify that I have read the Tuition Waiver Program Guidelines. </b></i> </p>
+
+                    <div class="form-group">
+                        <div class="col-xs-6" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="employeeSignature" required="required" style=" border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-6" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="date" name="date" required="required" style="border:0ch; border-bottom:1px solid; width: 60%;">
+                        </div>
+
+                        <div class="col-xs-6" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="employee_sign">Employee's Signature</label>
+                        </div>
+
+                        <div class="col-xs-6" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="date">Date </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!---- This part represents the Section 5 of the form ---->
+
+                <div  style="margin-top: 70px;">
+                    <h4 class="text-danger"> <b>Section 5 </b></h4>
+                    <div class="form-group">
+                        <div class="col-xs-6" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="text" name="hrmSignature" required="required" style=" border:0ch; border-bottom:1px solid; width: 100%;">
+                        </div>
+
+                        <div class="col-xs-6" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <input type="date" name="hrmDate" required="required" style="border:0ch; border-bottom:1px solid; width: 60%;">
+                        </div>
+
+                        <div class="col-xs-6" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="hrm_approval">HRM Approval</label>
+                        </div>
+
+                        <div class="col-xs-6" style="color: DimGray; font-size: 14px; font-weight: normal;">
+                            <label for="date1">Date </label>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+
+                    <div style="background-color: LightGray; color:rgb(5, 43, 84)">
+                        Forms will be reviewed for completeness and eligibility. You will be notified if any additional information is needed. Mail completed form to
+                        <b>Human Resources, 250 Columbus Place or fax to (617) 373-7610.</b> All waivers must be received by HRM within 30 days
+                        of the course start date.  
+                    </div>
+                </div>
+
+                <br>
+                <div style="padding-left: 400px;">
+                    <input type="submit" value="Submit"/>
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>
